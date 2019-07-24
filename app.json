@@ -1,0 +1,10 @@
+{
+  "name": "Random Airplane! Quotes",
+  "description": "Spits out random Airplane! quotes.",
+  "keywords": [
+    "flask",
+    "python",
+    "Airplane!"
+  ],
+  "repository": "https://github.com/jziems/airplane_flask"
+}
