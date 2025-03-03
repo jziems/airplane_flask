@@ -1,0 +1,15 @@
+wsgi_app = 'app:app'
+bind = 'unix:gunicorn_socket'
+backlog = 2048
+workers = 1
+worker_class = 'sync'
+worker_connections = 1000
+timeout = 30
+keepalive = 2
+reload = True
+# chdir = '/var/www'
+user = 33
+group = 33
+loglevel = 'debug'
+errorlog = '/var/log/gunicorn/error.log'
+accesslog = '/var/log/gunicorn/access.log'

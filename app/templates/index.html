@@ -1,34 +1,45 @@
 <html>
   <head>
     <link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Random Airplane! Quotes</title>
         <style>
         .character {
             font-weight: bold;
-            color: #000000;
-            text-decoration: none;
          }
-        .sodatext {
-            background-color: #f2f2df;
+        .text {
+            background-color: #fff;
             font-family: 'Special Elite', cursive;
             color: #000000;
             width: 6.5in;
             height: 11in;
-            border: 1px solid black;
+            border: none;
             margin: auto;
-            text-indent: .75in;
+            text-indent: none;
             padding-top: 1in;
             padding-left: 1in;
             padding-bottom: 1in;
             padding-right: 1in;
             line-height: 2.0;
         }
-        a {
-          text-decoration: none;
-        }
+        .jumbotron {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+	background-color: #fff;
+	border: none;
+}
         </style>
   </head>
   <body>
-        {{ quote|safe }}
+        <div class="container">
+         <div class="jumbotron">
+        <p class="text">{{ quote|safe }}</p>
+         </div>
+        </div>
   </body>
 </html>
