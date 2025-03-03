@@ -3,6 +3,7 @@ from .quote import Quotes
 
 app = Flask(__name__)
 q = Quotes()
+q.random()
 
 @app.route('/')
 def index():
