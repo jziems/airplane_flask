@@ -10,8 +10,8 @@ from playwright.sync_api import sync_playwright
 class Quotes:
 
     def __init__(self):
-        if os.path.isfile('quotes.json'):
-            with open('quotes.json', 'r') as fin:
+        if os.path.isfile('/tmp/quotes.json'):
+            with open('/tmp/quotes.json', 'r') as fin:
                 self.quotes = json.load(fin)
         else:
             self.quotes = []
@@ -36,8 +36,8 @@ class Quotes:
 
 
     def __del__(self):
-        if not os.path.isfile('quotes.json'):
-            with open('quotes.json', 'w') as fout:
+        if not os.path.isfile('/tmp/quotes.json'):
+            with open('/tmp/quotes.json', 'w') as fout:
                 json.dump(self.quotes, fout, indent=4)
 
     def random(self):
